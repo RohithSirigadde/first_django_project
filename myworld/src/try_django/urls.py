@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from frames import views
+
 urlpatterns = [
+	path('contact/', views.contact_view),	
+
+	path('', views.mainScreen_view,name='main screen'),	
     path('admin/', admin.site.urls),
 ]
