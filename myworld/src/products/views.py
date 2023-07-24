@@ -1,13 +1,14 @@
 from django.shortcuts import render
 
-from .forms import ProductFormDetails
+from .forms import ProductForm
 # Create your views here.
 from .models import Product
 
 def product_create_view(request):
-	form = ProductFormDetails(request.POST or None)
+	form = ProductForm(request.POST or None)
 	if form.is_valid():
 		form.save()
+		form = ProductForm
 
 	obj = Product.objects.get(id=1)
 	# context = {

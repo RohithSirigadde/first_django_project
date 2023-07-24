@@ -2,8 +2,8 @@ from django import forms
 
 from .models import Product
 
-class ProductFormDetails(forms.ModelForm):
-	class Beta:
+class ProductForm(forms.ModelForm):
+	class Meta:
 		model = Product
 		fields= [
 			'tag',

@@ -6,4 +6,4 @@ class Product(models.Model):
 	report   = models.TextField(blank=True,null=True)
 	fare     = models.DecimalField(decimal_places=2,max_digits=10000)
 	summary	 = models.TextField(blank=False, null=False)
-	prominent= models.BooleanField() # null=True, default=True
+	prominent= models.BooleanField(default=True) # null=True, default=True
