@@ -20,16 +20,17 @@ def product_create_view(request):
 	}
 	return render(request, "products/product_create.html", context)
 
-def dynamic_lookup_view(request,id):
-	obj = Product.objects.get(id=id)
-	try:
-		obj = Product.objects.get(id=id)
-	except Product.DoesNotExist:
-		raise Http404
-	context = {
-		"object" = obj
-	}
-    return render(request, "products/product_detail.html", context)
+
+def product_delete_view(request, id):
+    obj = get_object_or_404(Product, id=id)
+    if request.method == "POST":
+        obj.delete()
+        return redirect('../../')
+    context = {
+        "object": obj
+    }
+    return render(request, "products/product_delete.html", context)
+
 
 # def product_create_view(request):
 # 	# print(request.GET)

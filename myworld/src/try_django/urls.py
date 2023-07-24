@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 
 from frames.views import mainScreen_view, contact_view, detail_view
-from products.views import (product_details_view, product_create_view, dynamic_lookup_view )
+from products.views import (product_details_view, product_create_view, product_delete_view )
 
 # urlpatterns = [
 # 	path('contact/', contact_view),	
@@ -30,4 +30,7 @@ from products.views import (product_details_view, product_create_view, dynamic_l
 # ]
 
 urlpatterns = [
-    path=('products/<int:my_id>/', dynamic_lookup_view, name='Product') ]
+     path('<int:id>/delete/', product_delete_view, name='product-delete'),
+     path('create/', product_create_view, name='product-list'),
+     path('<int:id>/', product_details_view, name='product-detail'),
+]
