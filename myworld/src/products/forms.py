@@ -10,3 +10,9 @@ class ProductForm(forms.ModelForm):
 			'report',
 			'fare'
 		]
+
+
+class RawProductForm(forms.Form):
+    tag       = forms.CharField()
+    report    = forms.CharField()
+    fare       = forms.DecimalField(initial=199.99)
