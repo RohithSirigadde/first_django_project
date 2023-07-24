@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import path
 
 from frames.views import mainScreen_view, contact_view, detail_view
+from products.views import product_details_view
 
 urlpatterns = [
 	path('contact/', contact_view),	
 	path('detail/', detail_view),	
+	path('product/', product_details_view),	
 	path('', mainScreen_view, name='main screen'),	
     path('admin/', admin.site.urls),
 ]
