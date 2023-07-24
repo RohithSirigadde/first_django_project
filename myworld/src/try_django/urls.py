@@ -30,7 +30,6 @@ from products.views import (product_details_view, product_create_view, product_d
 # ]
 
 urlpatterns = [
-     path('<int:id>/delete/', product_delete_view, name='product-delete'),
-     path('create/', product_create_view, name='product-list'),
-     path('<int:id>/', product_details_view, name='product-detail'),
+     path('products/<int:id>/delete/', product_delete_view, name='product-delete'),
+     path('products/', product_list_view, name='product-list'),
 ]
