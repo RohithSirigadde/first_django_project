@@ -30,4 +30,4 @@ from products.views import (product_details_view, product_create_view, dynamic_l
 # ]
 
 urlpatterns = [
-    path=('products/<int:my_id>/', dynamic_lookup_view, name:='product') ]
+    path=('products/<int:my_id>/', dynamic_lookup_view, name='Product') ]
