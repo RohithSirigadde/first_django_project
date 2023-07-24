@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #apps
+    'frames',
     'products'
 ]
 
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'try_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/Dev/my_test_project/myworld/src/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

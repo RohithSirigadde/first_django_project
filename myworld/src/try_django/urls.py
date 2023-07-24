@@ -21,7 +21,7 @@ from frames import views
 
 urlpatterns = [
 	path('contact/', views.contact_view),	
-
+	path('detail/', views.detail_view),	
 	path('', views.mainScreen_view,name='main screen'),	
     path('admin/', admin.site.urls),
 ]
