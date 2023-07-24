@@ -33,9 +33,9 @@ class ProductForm(forms.ModelForm):
 
     def clean_tag(self, *args, **kwargs):
     	tag = self.cleaned_data.get('tag')
-    	if not "ABCD" in tag:
+    	if not "the" in tag:
     		raise forms.ValidationError("This is not a valid title")
-    	if not "ae" in tag:
+    	if not "an" in tag:
     		raise forms.ValidationError("This is not a valid title")
     	return tag
 
